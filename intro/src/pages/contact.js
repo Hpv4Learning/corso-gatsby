@@ -1,7 +1,13 @@
 import React from "react"
-import { Layout } from "../components"
+import { Layout, StaticQuery } from "../components"
 const Contact = () => {
-  return <Layout>Contattaci. Fidati</Layout>
+  return (
+    <Layout>
+      <div className="container">
+        <StaticQuery />
+      </div>
+    </Layout>
+  )
 }
 
 export default Contact
