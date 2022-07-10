@@ -24,3 +24,12 @@ h1 {
 .spacer {
     margin-top: 16px;
 }
+
+.flex-row {
+    display: flex;
+    gap: 16px;
+}
+
+.align-center {
+    align-items: center;
+}
