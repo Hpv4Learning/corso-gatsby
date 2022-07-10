@@ -1,18 +1,21 @@
 import React from "react"
 import { graphql, useStaticQuery } from "gatsby"
 import { ImageBox } from "./ImageBox"
-import { GatsbyImage } from "gatsby-plugin-image"
+import { GatsbyImage, getImage } from "gatsby-plugin-image"
 
 export const DynamicImage = () => {
   const data = useStaticQuery(query)
+  const image = React.useMemo(() => getImage(data.file), [data.file])
   return (
     <div className="spacer">
-      <ImageBox>
-        <GatsbyImage
-          alt="test"
-          image={data.file.childImageSharp.gatsbyImageData}
-        />
-      </ImageBox>
+      {image ? (
+        <ImageBox>
+          <GatsbyImage
+            alt="test"
+            image={data.file.childImageSharp.gatsbyImageData}
+          />
+        </ImageBox>
+      ) : null}
     </div>
   )
 }
