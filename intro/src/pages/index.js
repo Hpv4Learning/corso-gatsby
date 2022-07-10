@@ -1,6 +1,6 @@
 import React from "react"
 import styled from "styled-components"
-import { Button, Layout, CustomButton } from "../components"
+import { Button, Layout, CustomButton, DynamicImage } from "../components"
 //Far vede dall'insepect come le classi vengono nominate
 
 const Wrapper = styled.div`
@@ -27,6 +27,10 @@ export default function Home() {
         <Button>Sono un bottone</Button>
         <CustomButton isFullWidth>Eccomi</CustomButton>
       </Wrapper>
+
+      <div className="spacer">
+        <DynamicImage />
+      </div>
     </Layout>
   )
 }

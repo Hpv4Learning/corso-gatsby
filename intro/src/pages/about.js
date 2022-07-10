@@ -1,15 +1,6 @@
 import React from "react"
-import { Layout } from "../components"
-import styled from "styled-components"
+import { Layout, ImageBox } from "../components"
 import { StaticImage } from "gatsby-plugin-image"
-
-const ImageBox = styled.div({
-  width: "80vw",
-  borderRadius: "16px",
-  margin: "unset auto",
-  border: "1px solid var(--purple-400)",
-  overflow: "hidden",
-})
 
 const about = () => {
   return (
