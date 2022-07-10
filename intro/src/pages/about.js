@@ -1,18 +1,14 @@
 import React from "react"
 import { Layout } from "../components"
 import styled from "styled-components"
-import image from "../assets/images/big-image.jpeg"
 import { StaticImage } from "gatsby-plugin-image"
 
 const ImageBox = styled.div({
-  maxWidth: "343px",
+  width: "80vw",
   borderRadius: "16px",
-  width: "100%",
+  margin: "unset auto",
+  border: "1px solid var(--purple-400)",
   overflow: "hidden",
-  display: "flex",
-  "& img": {
-    width: "100%",
-  },
 })
 
 const about = () => {
@@ -25,17 +21,17 @@ const about = () => {
           marginTop: "20px",
         }}
       >
-        <h3>Images</h3>
-        <div className="spacer">
-          <ImageBox>
-            <StaticImage src="../assets/images/big-image.jpeg" />
-          </ImageBox>
-        </div>
-        <div className="spacer">
-          <ImageBox>
-            <StaticImage src="https://i.pinimg.com/564x/67/6b/4b/676b4b47db6cc1d6e25429858e1a8b2e.jpg" />
-          </ImageBox>
-        </div>
+        <h3>Constrained</h3>
+        <ImageBox>
+          <StaticImage
+            alt="trap"
+            src="../assets/images/constrained.jpeg"
+            placeholder="tracedSVG"
+            layout="constrained"
+            className="example-image"
+            as="footer"
+          />
+        </ImageBox>
       </div>
       <div className="spacer"></div>
     </Layout>
