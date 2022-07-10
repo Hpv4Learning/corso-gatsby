@@ -27,8 +27,9 @@ export const StaticQuery = () => {
   )
 }
 
+//Causa errore con query
 const query = graphql`
-  {
+  query MyFirstQuery {
     site {
       info: siteMetadata {
         title
