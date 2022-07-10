@@ -1,17 +1,35 @@
 import React from "react"
 import { Layout } from "../components"
-import * as aboutStyle from "../modules/about.module.css"
+import styled from "styled-components"
+import image from "../assets/images/big-image.jpeg"
+
+const ImageBox = styled.div({
+  maxWidth: "343px",
+  borderRadius: "16px",
+  width: "100%",
+  overflow: "hidden",
+  display: "flex",
+  "& img": {
+    width: "100%",
+  },
+})
 
 const about = () => {
   return (
     <Layout>
-      <div className={aboutStyle.page}>
-        <h1>About Page</h1>
-        <p className={aboutStyle.text}>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil sed ab
-          sunt optio illum at aut sit ea esse quisquam?
-        </p>
+      <h2>About Page</h2>
+
+      <div
+        style={{
+          marginTop: "20px",
+        }}
+      >
+        <h3>Images</h3>
+        <ImageBox className="spacer">
+          <img src={image} />
+        </ImageBox>
       </div>
+      <div className="spacer"></div>
     </Layout>
   )
 }

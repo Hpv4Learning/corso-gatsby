@@ -20,3 +20,7 @@ h1 {
     width: calc(100% - 24px);
     margin: auto;
 }
+
+.spacer {
+    margin-top: 16px;
+}
